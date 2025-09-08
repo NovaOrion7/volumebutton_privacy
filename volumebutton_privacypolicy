@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Nova Orion Volume Control</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2196F3;
+            border-bottom: 2px solid #2196F3;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #1976D2;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #1565C0;
+        }
+        .highlight {
+            background-color: #E3F2FD;
+            padding: 15px;
+            border-left: 4px solid #2196F3;
+            margin: 20px 0;
+        }
+        .contact-info {
+            background-color: #F5F5F5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #E0E0E0;
+            color: #666;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔐 Privacy Policy for Nova Orion Volume Control</h1>
+    
+    <div class="highlight">
+        <strong>Effective Date:</strong> September 8, 2025<br>
+        <strong>Last Updated:</strong> September 8, 2025
+    </div>
+
+    <h2>📱 Introduction</h2>
+    <p>Nova Orion Volume Control ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you use our mobile application.</p>
+
+    <h2>📊 Information We Collect</h2>
+
+    <h3>✅ Information We MAY Collect:</h3>
+    <ul>
+        <li><strong>Anonymous App Usage Statistics:</strong> Non-identifying analytics to improve app performance and UX (e.g., feature usage, screen views).</li>
+        <li><strong>Crash Reports:</strong> Automatic, anonymous crash and error reports to diagnose and fix issues.</li>
+        <li><strong>Ad Interaction Data:</strong> Anonymous advertising identifiers and interaction signals required by Google AdMob to serve ads.</li>
+    </ul>
+
+    <h3>❌ Information We DO NOT Collect:</h3>
+    <ul>
+        <li><strong>Personal Identifiers:</strong> We do not collect names, personal email addresses, phone numbers, or other direct identifiers.</li>
+        <li><strong>Audio Content:</strong> The app does not record, store, or transmit audio from your device.</li>
+        <li><strong>Sensitive Location / Contacts / Media:</strong> We do not collect location, contacts, photos, or camera content.</li>
+    </ul>
+
+    <h2>🎯 How We Use Information</h2>
+    <p>The limited data we collect is used solely for:</p>
+    <ul>
+        <li>Improving app functionality and performance</li>
+        <li>Fixing bugs and crashes</li>
+        <li>Serving relevant advertisements through Google AdMob</li>
+        <li>Analytics to understand app usage patterns</li>
+    </ul>
+
+    <h2>🤝 Third-Party Services</h2>
+    <p>Our app uses the following third-party services and SDKs. These services may collect limited anonymous data as described below:</p>
+
+    <h3>Google AdMob</h3>
+    <ul>
+        <li><strong>Purpose:</strong> Displaying advertisements in the app.</li>
+        <li><strong>Data Collection:</strong> Google may collect anonymous advertising identifiers (Advertising ID) and ad interaction data needed to serve and measure ads.</li>
+        <li><strong>Ad Personalization:</strong> Ad personalization may be available; users can opt out via their device settings. We do not control how Google uses identifiers; see Google's policy for details.</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob Privacy Policy</a></li>
+    </ul>
+
+    <h3>Google Play Services & Crash / Analytics SDKs</h3>
+    <ul>
+        <li><strong>Purpose:</strong> App distribution, crash reporting and basic analytics (anonymous).</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+    </ul>
+
+    <h2>🔒 Data Storage, Security and Retention</h2>
+    <ul>
+        <li>App preferences and settings are stored locally on your device.</li>
+        <li>We do not maintain backend servers for user personal data; any analytics/crash data sent to third parties is anonymous and retained by those providers under their policies.</li>
+        <li>We implement reasonable technical and organizational measures to protect data from unauthorized access.</li>
+        <li>Retention: Anonymous analytics and crash reports are retained only as long as necessary to improve the app. For third-party services (AdMob, crash/analytics), retention follows their policies.</li>
+    </ul>
+
+    <h2>♿ Accessibility Permission</h2>
+    <p>To enable certain convenience features (for example, enhanced volume control or automatic actions tied to hardware buttons), the app may request the Android Accessibility permission. Important details:</p>
+    <ul>
+        <li><strong>Why:</strong> Accessibility access allows the app to interact with system events required to implement features that improve usability (for example, displaying persistent volume controls or responding to system key events).</li>
+        <li><strong>What we DO NOT do:</strong> We do not read or transmit your typed text, screen contents, or audio. The permission is used only to detect system-level events and to control audio settings, as explained inside the app.</li>
+        <li><strong>User Control:</strong> Granting Accessibility access is optional. If you decline, the app will continue to work with reduced functionality where applicable.</li>
+    </ul>
+
+    <h2>👶 Children's Privacy</h2>
+    <p>Our app is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we discover that we have collected information from a child under 13, we will take steps to delete it promptly.</p>
+
+    <h2>🔑 Permissions</h2>
+    <p>The app may request the following permissions. Each permission is used only for the purposes listed:</p>
+    <ul>
+        <li><strong>Modify System Audio / Audio Settings:</strong> Required to change system and stream volumes.</li>
+        <li><strong>Foreground Service:</strong> To keep volume controls available while the app is running in the background.</li>
+        <li><strong>Vibration:</strong> To provide haptic feedback on certain actions.</li>
+        <li><strong>Notifications:</strong> To display persistent or quick-access volume controls.</li>
+        <li><strong>Internet Access:</strong> Used only to download and display advertisements; no personal data of users is uploaded by us.</li>
+        <li><strong>Accessibility:</strong> Optional; explained above in the Accessibility Permission section.</li>
+    </ul>
+
+    <h2>👤 Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+        <li>Stop using the app at any time.</li>
+        <li>Clear app data from your device settings (this will reset preferences and local data).</li>
+        <li>Opt out of personalized ads via your device advertising settings.</li>
+        <li>Request information about data we process (limited to non-identifying analytics) by contacting us at the email below.</li>
+    </ul>
+
+    <h2>📝 Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. If we make material changes, we will post the updated policy here with a new "Last Updated" date. Continued use of the app after updates indicates acceptance of the changes.</p>
+
+    <div class="contact-info">
+        <h2>📧 Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:</p>
+        <ul>
+            <li><strong>Email:</strong> nova.orion.dev@gmail.com</li>
+        </ul>
+        <p style="margin-top:8px;font-size:0.95em;color:#555">Data Controller: Nova Orion (contact via the email above). We will respond to verified requests within a reasonable timeframe.</p>
+    </div>
+
+    <h2>✅ Compliance</h2>
+    <p>This policy complies with:</p>
+    <ul>
+        <li>Google Play Policy requirements</li>
+        <li>GDPR (General Data Protection Regulation)</li>
+        <li>CCPA (California Consumer Privacy Act)</li>
+        <li>COPPA (Children's Online Privacy Protection Act)</li>
+    </ul>
+
+    <div class="footer">
+        <strong>Nova Orion Volume Control</strong><br>
+        <em>Developed with ❤️ by Nova Orion Team</em>
+    </div>
+</body>
+</html>
