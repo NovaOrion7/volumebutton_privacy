@@ -15,6 +15,7 @@
             --light-background: #f8f9ff;
             --text-dark: #333;
             --text-light: #f0f0f0;
+            --card-background: rgba(255, 255, 255, 0.92);
         }
         
         * {
@@ -41,8 +42,8 @@
         /* Animated sound wave elements */
         .sound-wave {
             position: absolute;
-            height: 2px;
-            background: var(--sound-wave-blue);
+            height: 3px;
+            background: linear-gradient(90deg, var(--sound-wave-blue), var(--star-gold));
             border-radius: 10px;
             opacity: 0.3;
             z-index: -1;
@@ -51,39 +52,46 @@
         .wave-1 {
             top: 10%;
             left: 5%;
-            width: 100px;
-            animation: waveMove 8s infinite linear;
+            width: 120px;
+            animation: waveMove 10s infinite linear;
         }
         
         .wave-2 {
             bottom: 15%;
             right: 7%;
-            width: 150px;
-            animation: waveMove 12s infinite linear reverse;
+            width: 180px;
+            animation: waveMove 15s infinite linear reverse;
         }
         
         .wave-3 {
             top: 40%;
             right: 10%;
-            width: 80px;
-            animation: waveMove 10s infinite linear;
+            width: 100px;
+            animation: waveMove 12s infinite linear;
+        }
+        
+        .wave-4 {
+            top: 70%;
+            left: 15%;
+            width: 140px;
+            animation: waveMove 18s infinite linear reverse;
         }
         
         @keyframes waveMove {
             0% { transform: translateX(-100px); opacity: 0.2; }
-            50% { opacity: 0.5; }
+            50% { opacity: 0.6; }
             100% { transform: translateX(100vw); opacity: 0.2; }
         }
         
         /* Shooting star effect */
         .shooting-star {
             position: absolute;
-            width: 2px;
-            height: 2px;
+            width: 3px;
+            height: 3px;
             background: white;
             border-radius: 50%;
-            box-shadow: 0 0 10px 2px var(--star-gold);
-            animation: shoot 5s linear infinite;
+            box-shadow: 0 0 15px 3px var(--star-gold);
+            animation: shoot 7s linear infinite;
             z-index: -1;
         }
         
@@ -96,7 +104,13 @@
         .star-2 {
             top: 60%;
             left: 80%;
-            animation-delay: 3s;
+            animation-delay: 4s;
+        }
+        
+        .star-3 {
+            top: 30%;
+            left: 70%;
+            animation-delay: 8s;
         }
         
         @keyframes shoot {
@@ -105,16 +119,47 @@
             100% { transform: translate(100vw, -100vh); opacity: 0; }
         }
         
+        /* Floating cosmic particles */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--nebula-purple);
+            border-radius: 50%;
+            box-shadow: 0 0 8px 1px var(--nebula-purple);
+            animation: float 15s infinite linear;
+            z-index: -1;
+        }
+        
+        .particle-1 {
+            top: 25%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+        
+        .particle-2 {
+            top: 75%;
+            left: 60%;
+            animation-delay: 5s;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0, 0); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { transform: translate(50px, -100px); opacity: 0; }
+        }
+        
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 30px;
+            background: var(--card-background);
+            border-radius: 18px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+            padding: 40px;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(147, 112, 219, 0.2);
+            border: 1px solid rgba(147, 112, 219, 0.3);
         }
         
         /* Orion constellation pattern in header */
@@ -123,7 +168,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 10px;
+            height: 12px;
             background: linear-gradient(90deg, 
                 transparent, 
                 var(--orion-blue), 
@@ -131,58 +176,62 @@
                 var(--star-gold), 
                 var(--sound-wave-blue),
                 transparent);
-            background-size: 200% 100%;
-            animation: gradientShift 4s linear infinite;
+            background-size: 300% 100%;
+            animation: gradientShift 5s linear infinite;
         }
         
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
-            100% { background-position: 200% 50%; }
+            100% { background-position: 300% 50%; }
         }
         
         h1 {
             color: var(--orion-blue);
             text-align: center;
-            padding: 20px 0 30px;
+            padding: 30px 0 40px;
             position: relative;
-            font-size: 2.2rem;
-            margin-bottom: 20px;
+            font-size: 2.4rem;
+            margin-bottom: 25px;
         }
         
         h1::after {
             content: '';
             position: absolute;
-            bottom: 10px;
+            bottom: 15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
+            width: 120px;
+            height: 5px;
             background: linear-gradient(90deg, var(--sound-wave-blue), var(--star-gold));
-            border-radius: 2px;
+            border-radius: 3px;
         }
         
         h2 {
             color: var(--nebula-purple);
-            margin: 35px 0 20px;
-            padding: 10px 0;
-            border-left: 4px solid var(--sound-wave-blue);
-            padding-left: 15px;
-            font-size: 1.5rem;
+            margin: 40px 0 25px;
+            padding: 15px 0;
+            border-left: 5px solid var(--sound-wave-blue);
+            padding-left: 20px;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
         }
         
         h3 {
             color: var(--orion-blue);
-            margin: 25px 0 15px;
-            font-size: 1.2rem;
+            margin: 30px 0 20px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
         }
         
         .highlight {
-            background: linear-gradient(135deg, rgba(79, 195, 247, 0.15), rgba(147, 112, 219, 0.15));
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 5px solid var(--sound-wave-blue);
-            margin: 25px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            background: linear-gradient(135deg, rgba(79, 195, 247, 0.18), rgba(147, 112, 219, 0.18));
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 6px solid var(--sound-wave-blue);
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .highlight strong {
@@ -190,11 +239,11 @@
         }
         
         .contact-info {
-            background: linear-gradient(135deg, rgba(255, 68, 68, 0.1), rgba(255, 215, 0, 0.1));
-            padding: 25px;
-            border-radius: 12px;
-            margin: 40px 0 30px;
-            border: 1px solid rgba(255, 68, 68, 0.2);
+            background: linear-gradient(135deg, rgba(255, 68, 68, 0.15), rgba(255, 215, 0, 0.15));
+            padding: 30px;
+            border-radius: 15px;
+            margin: 45px 0 35px;
+            border: 1px solid rgba(255, 68, 68, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -205,113 +254,216 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px;
+            height: 6px;
             background: linear-gradient(90deg, var(--volume-red), var(--star-gold));
         }
         
         .contact-info h2 {
             color: var(--volume-red);
             border-left-color: var(--volume-red);
+            margin-top: 0;
         }
         
         a {
             color: var(--sound-wave-blue);
             text-decoration: none;
             font-weight: 500;
-            padding: 2px 4px;
-            border-radius: 3px;
+            padding: 3px 5px;
+            border-radius: 4px;
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
         }
         
         a:hover {
             text-decoration: underline;
-            background: rgba(79, 195, 247, 0.1);
+            background: rgba(79, 195, 247, 0.15);
+            transform: translateY(-2px);
         }
         
         .footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 25px;
-            border-top: 1px dashed rgba(147, 112, 219, 0.3);
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px dashed rgba(147, 112, 219, 0.4);
             color: var(--nebula-purple);
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
         
         ul {
-            padding-left: 25px;
-            margin: 15px 0;
+            padding-left: 30px;
+            margin: 20px 0;
         }
         
         li {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             position: relative;
-            padding-left: 25px;
+            padding-left: 30px;
         }
         
-        li::before {
-            content: '🔊';
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        
-        .check::before {
-            content: '✅';
-        }
-        
-        .cross::before {
-            content: '❌';
-        }
-        
-        p {
-            margin: 15px 0;
-            text-align: justify;
+        /* Custom SVG icons */
+        .icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            vertical-align: middle;
         }
         
         .volume-icon {
-            display: inline-block;
-            margin-right: 10px;
-            font-size: 1.2em;
+            fill: var(--volume-red);
+        }
+        
+        .check-icon {
+            fill: #4CAF50;
+        }
+        
+        .cross-icon {
+            fill: var(--volume-red);
+        }
+        
+        .user-icon {
+            fill: var(--nebula-purple);
+        }
+        
+        .shield-icon {
+            fill: var(--sound-wave-blue);
+        }
+        
+        .doc-icon {
+            fill: var(--star-gold);
+        }
+        
+        .contact-icon {
+            fill: var(--volume-red);
+        }
+        
+        .compliance-icon {
+            fill: #8BC34A;
+        }
+        
+        p {
+            margin: 18px 0;
+            text-align: justify;
+        }
+        
+        /* Two-column layout for better space usage */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 25px 0;
+        }
+        
+        .column {
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(248, 249, 255, 0.7);
+            border: 1px solid rgba(147, 112, 219, 0.15);
+        }
+        
+        .column h3 {
+            margin-top: 0;
         }
         
         /* Responsive design */
         @media (max-width: 768px) {
             .container {
-                padding: 20px 15px;
+                padding: 25px 20px;
             }
             
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.9rem;
+                padding: 20px 0 30px;
             }
             
             body {
-                padding: 10px;
+                padding: 12px;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .column {
+                padding: 15px;
             }
         }
         
         /* Volume bar visualization */
+        .volume-bar-container {
+            background: rgba(19, 19, 66, 0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .volume-bar-title {
+            color: var(--orion-blue);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
         .volume-bar {
-            height: 6px;
-            background: linear-gradient(90deg, var(--volume-red), var(--sound-wave-blue));
-            border-radius: 3px;
-            margin: 20px 0;
+            height: 10px;
+            background: linear-gradient(90deg, #e0e0e0, #f5f5f5);
+            border-radius: 5px;
+            margin: 0 auto 25px;
             position: relative;
             overflow: hidden;
+            max-width: 600px;
         }
         
         .volume-level {
             position: absolute;
             height: 100%;
-            width: 70%;
-            background: var(--star-gold);
-            border-radius: 3px;
-            animation: volumePulse 3s infinite ease-in-out;
+            width: 0%;
+            background: linear-gradient(90deg, var(--volume-red), var(--sound-wave-blue), var(--star-gold));
+            border-radius: 5px;
+            animation: volumePulse 4s infinite ease-in-out;
         }
         
         @keyframes volumePulse {
-            0% { width: 60%; }
+            0% { width: 40%; }
             50% { width: 85%; }
-            100% { width: 60%; }
+            100% { width: 40%; }
+        }
+        
+        .volume-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .volume-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--card-background);
+            border: 2px solid var(--sound-wave-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .volume-btn:hover {
+            background: var(--sound-wave-blue);
+            transform: scale(1.1);
+        }
+        
+        .volume-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--sound-wave-blue);
+        }
+        
+        .volume-btn:hover svg {
+            fill: white;
         }
     </style>
 </head>
@@ -320,43 +472,98 @@
     <div class="sound-wave wave-1"></div>
     <div class="sound-wave wave-2"></div>
     <div class="sound-wave wave-3"></div>
+    <div class="sound-wave wave-4"></div>
     <div class="shooting-star star-1"></div>
     <div class="shooting-star star-2"></div>
+    <div class="shooting-star star-3"></div>
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
     
     <div class="container">
         <div class="header-pattern"></div>
-        <h1>🔐 Privacy Policy for Nova Orion Volume Control</h1>
+        <h1>
+            <svg class="icon shield-icon" viewBox="0 0 24 24">
+                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V16H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
+            </svg>
+            Privacy Policy for Nova Orion Volume Control
+        </h1>
         
         <div class="highlight">
             <strong>Effective Date:</strong> September 8, 2025<br>
             <strong>Last Updated:</strong> September 8, 2025
         </div>
         
-        <div class="volume-bar">
-            <div class="volume-level"></div>
+        <div class="volume-bar-container">
+            <div class="volume-bar-title">Audio Privacy Visualization</div>
+            <div class="volume-bar">
+                <div class="volume-level"></div>
+            </div>
+            <div class="volume-controls">
+                <div class="volume-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7,9V15H11L16,20V4L11,9H7Z"/>
+                    </svg>
+                </div>
+                <div class="volume-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"/>
+                    </svg>
+                </div>
+            </div>
         </div>
 
-        <h2>📱 Introduction</h2>
-        <p><span class="volume-icon">🔊</span> Nova Orion Volume Control ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you use our mobile application.</p>
+        <h2>
+            <svg class="icon user-icon" viewBox="0 0 24 24">
+                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+            </svg>
+            Introduction
+        </h2>
+        <p>Nova Orion Volume Control ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you use our mobile application.</p>
 
-        <h2>📊 Information We Collect</h2>
+        <h2>
+            <svg class="icon doc-icon" viewBox="0 0 24 24">
+                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+            </svg>
+            Information We Collect
+        </h2>
 
-        <h3 class="check">✅ Information We MAY Collect:</h3>
-        <ul>
-            <li><strong>Anonymous App Usage Statistics:</strong> Non-identifying analytics to improve app performance and UX (e.g., feature usage, screen views).</li>
-            <li><strong>Crash Reports:</strong> Automatic, anonymous crash and error reports to diagnose and fix issues.</li>
-            <li><strong>Ad Interaction Data:</strong> Anonymous advertising identifiers and interaction signals required by Google AdMob to serve ads.</li>
-        </ul>
+        <div class="two-column">
+            <div class="column">
+                <h3>
+                    <svg class="icon check-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/>
+                    </svg>
+                    Information We MAY Collect
+                </h3>
+                <ul>
+                    <li><strong>Anonymous App Usage Statistics:</strong> Non-identifying analytics to improve app performance and UX (e.g., feature usage, screen views).</li>
+                    <li><strong>Crash Reports:</strong> Automatic, anonymous crash and error reports to diagnose and fix issues.</li>
+                    <li><strong>Ad Interaction Data:</strong> Anonymous advertising identifiers and interaction signals required by Google AdMob to serve ads.</li>
+                </ul>
+            </div>
+            
+            <div class="column">
+                <h3>
+                    <svg class="icon cross-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M15.59 7L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17L17 15.59L13.41 12L17 8.41L15.59 7Z"/>
+                    </svg>
+                    Information We DO NOT Collect
+                </h3>
+                <ul>
+                    <li><strong>Personal Identifiers:</strong> We do not collect names, personal email addresses, phone numbers, or other direct identifiers.</li>
+                    <li><strong>Audio Content:</strong> The app does not record, store, or transmit audio from your device.</li>
+                    <li><strong>Sensitive Location / Contacts / Media:</strong> We do not collect location, contacts, photos, or camera content.</li>
+                </ul>
+            </div>
+        </div>
 
-        <h3 class="cross">❌ Information We DO NOT Collect:</h3>
-        <ul>
-            <li><strong>Personal Identifiers:</strong> We do not collect names, personal email addresses, phone numbers, or other direct identifiers.</li>
-            <li><strong>Audio Content:</strong> The app does not record, store, or transmit audio from your device.</li>
-            <li><strong>Sensitive Location / Contacts / Media:</strong> We do not collect location, contacts, photos, or camera content.</li>
-        </ul>
-
-        <h2>🎯 How We Use Information</h2>
-        <p><span class="volume-icon">🔊</span> The limited data we collect is used solely for:</p>
+        <h2>
+            <svg class="icon volume-icon" viewBox="0 0 24 24">
+                <path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"/>
+            </svg>
+            How We Use Information
+        </h2>
+        <p>The limited data we collect is used solely for:</p>
         <ul>
             <li>Improving app functionality and performance</li>
             <li>Fixing bugs and crashes</li>
@@ -364,24 +571,40 @@
             <li>Analytics to understand app usage patterns</li>
         </ul>
 
-        <h2>🤝 Third-Party Services</h2>
-        <p><span class="volume-icon">🔊</span> Our app uses the following third-party services and SDKs. These services may collect limited anonymous data as described below:</p>
+        <h2>
+            <svg class="icon shield-icon" viewBox="0 0 24 24">
+                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V16H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
+            </svg>
+            Third-Party Services
+        </h2>
+        <p>Our app uses the following third-party services and SDKs. These services may collect limited anonymous data as described below:</p>
 
-        <h3>Google AdMob</h3>
-        <ul>
-            <li><strong>Purpose:</strong> Displaying advertisements in the app.</li>
-            <li><strong>Data Collection:</strong> Google may collect anonymous advertising identifiers (Advertising ID) and ad interaction data needed to serve and measure ads.</li>
-            <li><strong>Ad Personalization:</strong> Ad personalization may be available; users can opt out via their device settings. We do not control how Google uses identifiers; see Google's policy for details.</li>
-            <li><strong>Privacy Policy:</strong> <a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob Privacy Policy</a></li>
-        </ul>
+        <div class="two-column">
+            <div class="column">
+                <h3>Google AdMob</h3>
+                <ul>
+                    <li><strong>Purpose:</strong> Displaying advertisements in the app.</li>
+                    <li><strong>Data Collection:</strong> Google may collect anonymous advertising identifiers (Advertising ID) and ad interaction data needed to serve and measure ads.</li>
+                    <li><strong>Ad Personalization:</strong> Ad personalization may be available; users can opt out via their device settings. We do not control how Google uses identifiers; see Google's policy for details.</li>
+                    <li><strong>Privacy Policy:</strong> <a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="column">
+                <h3>Google Play Services & Crash / Analytics SDKs</h3>
+                <ul>
+                    <li><strong>Purpose:</strong> App distribution, crash reporting and basic analytics (anonymous).</li>
+                    <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
 
-        <h3>Google Play Services & Crash / Analytics SDKs</h3>
-        <ul>
-            <li><strong>Purpose:</strong> App distribution, crash reporting and basic analytics (anonymous).</li>
-            <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-        </ul>
-
-        <h2>🔒 Data Storage, Security and Retention</h2>
+        <h2>
+            <svg class="icon shield-icon" viewBox="0 0 24 24">
+                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V16H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
+            </svg>
+            Data Storage, Security and Retention
+        </h2>
         <ul>
             <li>App preferences and settings are stored locally on your device.</li>
             <li>We do not maintain backend servers for user personal data; any analytics/crash data sent to third parties is anonymous and retained by those providers under their policies.</li>
@@ -389,19 +612,34 @@
             <li>Retention: Anonymous analytics and crash reports are retained only as long as necessary to improve the app. For third-party services (AdMob, crash/analytics), retention follows their policies.</li>
         </ul>
 
-        <h2>♿ Accessibility Permission</h2>
-        <p><span class="volume-icon">🔊</span> To enable certain convenience features (for example, enhanced volume control or automatic actions tied to hardware buttons), the app may request the Android Accessibility permission. Important details:</p>
+        <h2>
+            <svg class="icon user-icon" viewBox="0 0 24 24">
+                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+            </svg>
+            Accessibility Permission
+        </h2>
+        <p>To enable certain convenience features (for example, enhanced volume control or automatic actions tied to hardware buttons), the app may request the Android Accessibility permission. Important details:</p>
         <ul>
             <li><strong>Why:</strong> Accessibility access allows the app to interact with system events required to implement features that improve usability (for example, displaying persistent volume controls or responding to system key events).</li>
             <li><strong>What we DO NOT do:</strong> We do not read or transmit your typed text, screen contents, or audio. The permission is used only to detect system-level events and to control audio settings, as explained inside the app.</li>
             <li><strong>User Control:</strong> Granting Accessibility access is optional. If you decline, the app will continue to work with reduced functionality where applicable.</li>
         </ul>
 
-        <h2>👶 Children's Privacy</h2>
-        <p><span class="volume-icon">🔊</span> Our app is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we discover that we have collected information from a child under 13, we will take steps to delete it promptly.</p>
+        <h2>
+            <svg class="icon user-icon" viewBox="0 0 24 24">
+                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+            </svg>
+            Children's Privacy
+        </h2>
+        <p>Our app is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we discover that we have collected information from a child under 13, we will take steps to delete it promptly.</p>
 
-        <h2>🔑 Permissions</h2>
-        <p><span class="volume-icon">🔊</span> The app may request the following permissions. Each permission is used only for the purposes listed:</p>
+        <h2>
+            <svg class="icon doc-icon" viewBox="0 0 24 24">
+                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+            </svg>
+            Permissions
+        </h2>
+        <p>The app may request the following permissions. Each permission is used only for the purposes listed:</p>
         <ul>
             <li><strong>Modify System Audio / Audio Settings:</strong> Required to change system and stream volumes.</li>
             <li><strong>Foreground Service:</strong> To keep volume controls available while the app is running in the background.</li>
@@ -411,8 +649,13 @@
             <li><strong>Accessibility:</strong> Optional; explained above in the Accessibility Permission section.</li>
         </ul>
 
-        <h2>👤 Your Rights</h2>
-        <p><span class="volume-icon">🔊</span> You have the right to:</p>
+        <h2>
+            <svg class="icon user-icon" viewBox="0 0 24 24">
+                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+            </svg>
+            Your Rights
+        </h2>
+        <p>You have the right to:</p>
         <ul>
             <li>Stop using the app at any time.</li>
             <li>Clear app data from your device settings (this will reset preferences and local data).</li>
@@ -420,20 +663,35 @@
             <li>Request information about data we process (limited to non-identifying analytics) by contacting us at the email below.</li>
         </ul>
 
-        <h2>📝 Changes to This Policy</h2>
-        <p><span class="volume-icon">🔊</span> We may update this Privacy Policy from time to time. If we make material changes, we will post the updated policy here with a new "Last Updated" date. Continued use of the app after updates indicates acceptance of the changes.</p>
+        <h2>
+            <svg class="icon doc-icon" viewBox="0 0 24 24">
+                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+            </svg>
+            Changes to This Policy
+        </h2>
+        <p>We may update this Privacy Policy from time to time. If we make material changes, we will post the updated policy here with a new "Last Updated" date. Continued use of the app after updates indicates acceptance of the changes.</p>
 
         <div class="contact-info">
-            <h2>📧 Contact Us</h2>
+            <h2>
+                <svg class="icon contact-icon" viewBox="0 0 24 24">
+                    <path d="M20,4H4C2.89,4 2,4.89 2,6V18C2,19.1 2.9,20 4,20H20C21.1,20 22,19.1 22,18V6C22,4.89 21.1,4 20,4M20,8L12,13L4,8V6L12,11L20,6V8Z"/>
+                </svg>
+                Contact Us
+            </h2>
             <p>If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:</p>
             <ul>
                 <li><strong>Email:</strong> <a href="mailto:nova.orion.dev@gmail.com">nova.orion.dev@gmail.com</a></li>
             </ul>
-            <p style="margin-top:8px;font-size:0.95em;color:#555">Data Controller: Nova Orion (contact via the email above). We will respond to verified requests within a reasonable timeframe.</p>
+            <p style="margin-top:12px;font-size:0.95em;color:#555">Data Controller: Nova Orion (contact via the email above). We will respond to verified requests within a reasonable timeframe.</p>
         </div>
 
-        <h2>✅ Compliance</h2>
-        <p><span class="volume-icon">🔊</span> This policy complies with:</p>
+        <h2>
+            <svg class="icon compliance-icon" viewBox="0 0 24 24">
+                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"/>
+            </svg>
+            Compliance
+        </h2>
+        <p>This policy complies with:</p>
         <ul>
             <li>Google Play Policy requirements</li>
             <li>GDPR (General Data Protection Regulation)</li>
