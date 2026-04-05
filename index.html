@@ -5,704 +5,299 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Nova Orion Volume Control</title>
     <style>
-        :root {
-            --orion-blue: #131342;
-            --star-gold: #FFD700;
-            --nebula-purple: #9370DB;
-            --cosmic-background: #0F0F2D;
-            --volume-red: #FF4444;
-            --sound-wave-blue: #4FC3F7;
-            --light-background: #f8f9ff;
-            --text-dark: #333;
-            --text-light: #f0f0f0;
-            --card-background: rgba(255, 255, 255, 0.92);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            background: var(--light-background);
-            color: var(--text-dark);
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(147, 112, 219, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(79, 195, 247, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 30%);
-            background-attachment: fixed;
-            padding: 20px;
-            position: relative;
-            overflow-x: hidden;
-        }
-        
-        /* Animated sound wave elements */
-        .sound-wave {
-            position: absolute;
-            height: 3px;
-            background: linear-gradient(90deg, var(--sound-wave-blue), var(--star-gold));
-            border-radius: 10px;
-            opacity: 0.3;
-            z-index: -1;
-        }
-        
-        .wave-1 {
-            top: 10%;
-            left: 5%;
-            width: 120px;
-            animation: waveMove 10s infinite linear;
-        }
-        
-        .wave-2 {
-            bottom: 15%;
-            right: 7%;
-            width: 180px;
-            animation: waveMove 15s infinite linear reverse;
-        }
-        
-        .wave-3 {
-            top: 40%;
-            right: 10%;
-            width: 100px;
-            animation: waveMove 12s infinite linear;
-        }
-        
-        .wave-4 {
-            top: 70%;
-            left: 15%;
-            width: 140px;
-            animation: waveMove 18s infinite linear reverse;
-        }
-        
-        @keyframes waveMove {
-            0% { transform: translateX(-100px); opacity: 0.2; }
-            50% { opacity: 0.6; }
-            100% { transform: translateX(100vw); opacity: 0.2; }
-        }
-        
-        /* Shooting star effect */
-        .shooting-star {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: white;
-            border-radius: 50%;
-            box-shadow: 0 0 15px 3px var(--star-gold);
-            animation: shoot 7s linear infinite;
-            z-index: -1;
-        }
-        
-        .star-1 {
-            top: 20%;
-            left: 5%;
-            animation-delay: 0s;
-        }
-        
-        .star-2 {
-            top: 60%;
-            left: 80%;
-            animation-delay: 4s;
-        }
-        
-        .star-3 {
-            top: 30%;
-            left: 70%;
-            animation-delay: 8s;
-        }
-        
-        @keyframes shoot {
-            0% { transform: translate(0, 0); opacity: 0; }
-            10% { opacity: 1; }
-            100% { transform: translate(100vw, -100vh); opacity: 0; }
-        }
-        
-        /* Floating cosmic particles */
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: var(--nebula-purple);
-            border-radius: 50%;
-            box-shadow: 0 0 8px 1px var(--nebula-purple);
-            animation: float 15s infinite linear;
-            z-index: -1;
-        }
-        
-        .particle-1 {
-            top: 25%;
-            left: 20%;
-            animation-delay: 0s;
-        }
-        
-        .particle-2 {
-            top: 75%;
-            left: 60%;
-            animation-delay: 5s;
-        }
-        
-        @keyframes float {
-            0% { transform: translate(0, 0); opacity: 0; }
-            10% { opacity: 0.7; }
-            90% { opacity: 0.7; }
-            100% { transform: translate(50px, -100px); opacity: 0; }
-        }
-        
-        .container {
-            max-width: 1000px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
             margin: 0 auto;
-            background: var(--card-background);
-            border-radius: 18px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
-            padding: 40px;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(147, 112, 219, 0.3);
+            padding: 20px;
+            color: #333;
         }
-        
-        /* Orion constellation pattern in header */
-        .header-pattern {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 12px;
-            background: linear-gradient(90deg, 
-                transparent, 
-                var(--orion-blue), 
-                var(--nebula-purple), 
-                var(--star-gold), 
-                var(--sound-wave-blue),
-                transparent);
-            background-size: 300% 100%;
-            animation: gradientShift 5s linear infinite;
-        }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 300% 50%; }
-        }
-        
         h1 {
-            color: var(--orion-blue);
-            text-align: center;
-            padding: 30px 0 40px;
-            position: relative;
-            font-size: 2.4rem;
-            margin-bottom: 25px;
+            color: #2196F3;
+            border-bottom: 2px solid #2196F3;
+            padding-bottom: 10px;
         }
-        
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 5px;
-            background: linear-gradient(90deg, var(--sound-wave-blue), var(--star-gold));
-            border-radius: 3px;
-        }
-        
         h2 {
-            color: var(--nebula-purple);
-            margin: 40px 0 25px;
-            padding: 15px 0;
-            border-left: 5px solid var(--sound-wave-blue);
-            padding-left: 20px;
-            font-size: 1.6rem;
-            display: flex;
-            align-items: center;
+            color: #1976D2;
+            margin-top: 30px;
         }
-        
         h3 {
-            color: var(--orion-blue);
-            margin: 30px 0 20px;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
+            color: #1565C0;
         }
-        
         .highlight {
-            background: linear-gradient(135deg, rgba(79, 195, 247, 0.18), rgba(147, 112, 219, 0.18));
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 6px solid var(--sound-wave-blue);
-            margin: 30px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .highlight strong {
-            color: var(--orion-blue);
-        }
-        
-        .contact-info {
-            background: linear-gradient(135deg, rgba(255, 68, 68, 0.15), rgba(255, 215, 0, 0.15));
-            padding: 30px;
-            border-radius: 15px;
-            margin: 45px 0 35px;
-            border: 1px solid rgba(255, 68, 68, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .contact-info::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(90deg, var(--volume-red), var(--star-gold));
-        }
-        
-        .contact-info h2 {
-            color: var(--volume-red);
-            border-left-color: var(--volume-red);
-            margin-top: 0;
-        }
-        
-        a {
-            color: var(--sound-wave-blue);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 3px 5px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-            background: rgba(79, 195, 247, 0.15);
-            transform: translateY(-2px);
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px dashed rgba(147, 112, 219, 0.4);
-            color: var(--nebula-purple);
-            font-size: 1rem;
-        }
-        
-        ul {
-            padding-left: 30px;
+            background-color: #E3F2FD;
+            padding: 15px;
+            border-left: 4px solid #2196F3;
             margin: 20px 0;
         }
-        
-        li {
-            margin-bottom: 15px;
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        /* Custom SVG icons */
-        .icon {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            margin-right: 12px;
-            vertical-align: middle;
-        }
-        
-        .volume-icon {
-            fill: var(--volume-red);
-        }
-        
-        .check-icon {
-            fill: #4CAF50;
-        }
-        
-        .cross-icon {
-            fill: var(--volume-red);
-        }
-        
-        .user-icon {
-            fill: var(--nebula-purple);
-        }
-        
-        .shield-icon {
-            fill: var(--sound-wave-blue);
-        }
-        
-        .doc-icon {
-            fill: var(--star-gold);
-        }
-        
-        .contact-icon {
-            fill: var(--volume-red);
-        }
-        
-        .compliance-icon {
-            fill: #8BC34A;
-        }
-        
-        p {
-            margin: 18px 0;
-            text-align: justify;
-        }
-        
-        /* Two-column layout for better space usage */
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 25px 0;
-        }
-        
-        .column {
+        .contact-info {
+            background-color: #F5F5F5;
             padding: 20px;
-            border-radius: 10px;
-            background: rgba(248, 249, 255, 0.7);
-            border: 1px solid rgba(147, 112, 219, 0.15);
+            border-radius: 8px;
+            margin-top: 30px;
         }
-        
-        .column h3 {
-            margin-top: 0;
+        a {
+            color: #2196F3;
+            text-decoration: none;
         }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 25px 20px;
-            }
-            
-            h1 {
-                font-size: 1.9rem;
-                padding: 20px 0 30px;
-            }
-            
-            body {
-                padding: 12px;
-            }
-            
-            .two-column {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .column {
-                padding: 15px;
-            }
+        a:hover {
+            text-decoration: underline;
         }
-        
-        /* Volume bar visualization */
-        .volume-bar-container {
-            background: rgba(19, 19, 66, 0.1);
-            border-radius: 10px;
-            padding: 25px;
-            margin: 30px 0;
+        .footer {
             text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #E0E0E0;
+            color: #666;
         }
-        
-        .volume-bar-title {
-            color: var(--orion-blue);
-            margin-bottom: 20px;
-            font-weight: 600;
+        ul {
+            padding-left: 20px;
         }
-        
-        .volume-bar {
-            height: 10px;
-            background: linear-gradient(90deg, #e0e0e0, #f5f5f5);
-            border-radius: 5px;
-            margin: 0 auto 25px;
-            position: relative;
-            overflow: hidden;
-            max-width: 600px;
+        li {
+            margin-bottom: 8px;
         }
-        
-        .volume-level {
-            position: absolute;
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, var(--volume-red), var(--sound-wave-blue), var(--star-gold));
-            border-radius: 5px;
-            animation: volumePulse 4s infinite ease-in-out;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
         }
-        
-        @keyframes volumePulse {
-            0% { width: 40%; }
-            50% { width: 85%; }
-            100% { width: 40%; }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
         }
-        
-        .volume-controls {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 15px;
-        }
-        
-        .volume-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--card-background);
-            border: 2px solid var(--sound-wave-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .volume-btn:hover {
-            background: var(--sound-wave-blue);
-            transform: scale(1.1);
-        }
-        
-        .volume-btn svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--sound-wave-blue);
-        }
-        
-        .volume-btn:hover svg {
-            fill: white;
+        th {
+            background-color: #E3F2FD;
+            color: #1565C0;
         }
     </style>
 </head>
 <body>
-    <!-- Animated background elements -->
-    <div class="sound-wave wave-1"></div>
-    <div class="sound-wave wave-2"></div>
-    <div class="sound-wave wave-3"></div>
-    <div class="sound-wave wave-4"></div>
-    <div class="shooting-star star-1"></div>
-    <div class="shooting-star star-2"></div>
-    <div class="shooting-star star-3"></div>
-    <div class="particle particle-1"></div>
-    <div class="particle particle-2"></div>
-    
-    <div class="container">
-        <div class="header-pattern"></div>
-        <h1>
-            <svg class="icon shield-icon" viewBox="0 0 24 24">
-                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V16H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
-            </svg>
-            Privacy Policy for Nova Orion Volume Control
-        </h1>
-        
-        <div class="highlight">
-            <strong>Effective Date:</strong> August 8, 2025<br>
-            <strong>Last Updated:</strong> September 8, 2025
-        </div>
-        
-        <div class="volume-bar-container">
-            <div class="volume-bar-title">Audio Privacy Visualization</div>
-            <div class="volume-bar">
-                <div class="volume-level"></div>
-            </div>
-            <div class="volume-controls">
-                <div class="volume-btn">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M7,9V15H11L16,20V4L11,9H7Z"/>
-                    </svg>
-                </div>
-                <div class="volume-btn">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
+    <h1>&#128272; Privacy Policy for Nova Orion Volume Control</h1>
 
-        <h2>
-            <svg class="icon user-icon" viewBox="0 0 24 24">
-                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
-            </svg>
-            Introduction
-        </h2>
-        <p>Nova Orion Volume Control ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you use our mobile application.</p>
+    <div class="highlight">
+        <strong>Effective Date:</strong> April 5, 2026<br>
+        <strong>Last Updated:</strong> April 5, 2026
+    </div>
 
-        <h2>
-            <svg class="icon doc-icon" viewBox="0 0 24 24">
-                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-            </svg>
-            Information We Collect
-        </h2>
+    <h2>&#128241; 1. Introduction</h2>
+    <p>Nova Orion ("we," "our," or "us") operates the Nova Orion Volume Control mobile application (the "App"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App. Please read this policy carefully. By using the App, you agree to the collection and use of information in accordance with this policy.</p>
+    <p><strong>Data Controller:</strong> Nova Orion, contact via <a href="mailto:nova.orion.dev@gmail.com">nova.orion.dev@gmail.com</a></p>
 
-        <div class="two-column">
-            <div class="column">
-                <h3>
-                    <svg class="icon check-icon" viewBox="0 0 24 24">
-                        <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/>
-                    </svg>
-                    Information We MAY Collect
-                </h3>
-                <ul>
-                    <li><strong>Anonymous App Usage Statistics:</strong> Non-identifying analytics to improve app performance and UX (e.g., feature usage, screen views).</li>
-                    <li><strong>Crash Reports:</strong> Automatic, anonymous crash and error reports to diagnose and fix issues.</li>
-                    <li><strong>Ad Interaction Data:</strong> Anonymous advertising identifiers and interaction signals required by Google AdMob to serve ads.</li>
-                </ul>
-            </div>
-            
-            <div class="column">
-                <h3>
-                    <svg class="icon cross-icon" viewBox="0 0 24 24">
-                        <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M15.59 7L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17L17 15.59L13.41 12L17 8.41L15.59 7Z"/>
-                    </svg>
-                    Information We DO NOT Collect
-                </h3>
-                <ul>
-                    <li><strong>Personal Identifiers:</strong> We do not collect names, personal email addresses, phone numbers, or other direct identifiers.</li>
-                    <li><strong>Audio Content:</strong> The app does not record, store, or transmit audio from your device.</li>
-                    <li><strong>Sensitive Location / Contacts / Media:</strong> We do not collect location, contacts, photos, or camera content.</li>
-                </ul>
-            </div>
-        </div>
+    <h2>&#128202; 2. Information We Collect</h2>
 
-        <h2>
-            <svg class="icon volume-icon" viewBox="0 0 24 24">
-                <path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"/>
-            </svg>
-            How We Use Information
-        </h2>
-        <p>The limited data we collect is used solely for:</p>
-        <ul>
-            <li>Improving app functionality and performance</li>
-            <li>Fixing bugs and crashes</li>
-            <li>Serving relevant advertisements through Google AdMob</li>
-            <li>Analytics to understand app usage patterns</li>
-        </ul>
+    <h3>2.1 Information We MAY Collect:</h3>
+    <ul>
+        <li><strong>Device Information:</strong> Device type, operating system version, unique device identifiers (including Android Advertising ID), language settings, and mobile network information.</li>
+        <li><strong>App Usage Statistics:</strong> Non-identifying analytics to improve app performance and user experience (e.g., feature usage, screen views, session duration).</li>
+        <li><strong>Crash Reports:</strong> Automatic, anonymous crash and error reports to diagnose and fix issues.</li>
+        <li><strong>Advertising Data:</strong> Anonymous advertising identifiers, ad interaction data (impressions, clicks), and signals required by Google AdMob to serve and measure advertisements.</li>
+        <li><strong>Cookies and Similar Technologies:</strong> Our advertising partners may use cookies, pixel tags, and similar technologies to collect information about your interactions with ads. These technologies may store or access information on your device.</li>
+        <li><strong>Approximate Location:</strong> Our advertising partners may infer approximate geographic location from your IP address for the purpose of serving relevant advertisements. We do not collect precise GPS location data.</li>
+        <li><strong>Purchase Information:</strong> If you make in-app purchases (e.g., Premium subscription), transaction data is processed by Google Play Billing. We only receive confirmation of purchase status; we do not have access to your payment details.</li>
+    </ul>
 
-        <h2>
-            <svg class="icon shield-icon" viewBox="0 0 24 24">
-                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V16H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
-            </svg>
-            Third-Party Services
-        </h2>
-        <p>Our app uses the following third-party services and SDKs. These services may collect limited anonymous data as described below:</p>
+    <h3>2.2 Information We DO NOT Collect:</h3>
+    <ul>
+        <li><strong>Personal Identifiers:</strong> We do not collect names, personal email addresses, phone numbers, or other direct identifiers.</li>
+        <li><strong>Audio Content:</strong> The app does not record, store, or transmit audio from your device.</li>
+        <li><strong>Precise Location:</strong> We do not collect GPS or precise geolocation data.</li>
+        <li><strong>Contacts / Photos / Camera:</strong> We do not access your contacts, photos, or camera.</li>
+    </ul>
 
-        <div class="two-column">
-            <div class="column">
-                <h3>Google AdMob</h3>
-                <ul>
-                    <li><strong>Purpose:</strong> Displaying advertisements in the app.</li>
-                    <li><strong>Data Collection:</strong> Google may collect anonymous advertising identifiers (Advertising ID) and ad interaction data needed to serve and measure ads.</li>
-                    <li><strong>Ad Personalization:</strong> Ad personalization may be available; users can opt out via their device settings. We do not control how Google uses identifiers; see Google's policy for details.</li>
-                    <li><strong>Privacy Policy:</strong> <a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob Privacy Policy</a></li>
-                </ul>
-            </div>
-            
-            <div class="column">
-                <h3>Google Play Services & Crash / Analytics SDKs</h3>
-                <ul>
-                    <li><strong>Purpose:</strong> App distribution, crash reporting and basic analytics (anonymous).</li>
-                    <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-                </ul>
-            </div>
-        </div>
+    <h2>&#9878;&#65039; 3. Legal Basis for Processing (EEA/UK Users)</h2>
+    <p>If you are located in the European Economic Area (EEA) or the United Kingdom (UK), we process your personal data based on the following legal grounds under the General Data Protection Regulation (GDPR):</p>
+    <table>
+        <tr>
+            <th>Purpose</th>
+            <th>Legal Basis</th>
+        </tr>
+        <tr>
+            <td>Serving personalized advertisements</td>
+            <td><strong>Consent</strong> (Art. 6(1)(a) GDPR) &mdash; collected via the consent dialog shown in the App</td>
+        </tr>
+        <tr>
+            <td>Storing/accessing information on your device (cookies, ad identifiers)</td>
+            <td><strong>Consent</strong> (Art. 6(1)(a) GDPR / ePrivacy Directive)</td>
+        </tr>
+        <tr>
+            <td>Advertising measurement and analytics</td>
+            <td><strong>Legitimate Interest</strong> (Art. 6(1)(f) GDPR) &mdash; to understand ad performance and improve the App</td>
+        </tr>
+        <tr>
+            <td>Crash reporting and bug fixing</td>
+            <td><strong>Legitimate Interest</strong> (Art. 6(1)(f) GDPR) &mdash; to maintain and improve the App</td>
+        </tr>
+        <tr>
+            <td>Providing core App functionality</td>
+            <td><strong>Contract Performance</strong> (Art. 6(1)(b) GDPR)</td>
+        </tr>
+    </table>
+    <p>Where we rely on legitimate interest, we have conducted a balancing test to ensure that our interests do not override your fundamental rights and freedoms. You have the right to object to processing based on legitimate interest at any time.</p>
 
-        <h2>
-            <svg class="icon shield-icon" viewBox="0 0 24 24">
-                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V16H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
-            </svg>
-            Data Storage, Security and Retention
-        </h2>
-        <ul>
-            <li>App preferences and settings are stored locally on your device.</li>
-            <li>We do not maintain backend servers for user personal data; any analytics/crash data sent to third parties is anonymous and retained by those providers under their policies.</li>
-            <li>We implement reasonable technical and organizational measures to protect data from unauthorized access.</li>
-            <li>Retention: Anonymous analytics and crash reports are retained only as long as necessary to improve the app. For third-party services (AdMob, crash/analytics), retention follows their policies.</li>
-        </ul>
+    <h2>&#127919; 4. How We Use Information</h2>
+    <p>The limited data we collect is used solely for:</p>
+    <ul>
+        <li>Providing and maintaining the App's core functionality</li>
+        <li>Improving app performance and user experience</li>
+        <li>Fixing bugs and crashes</li>
+        <li>Serving advertisements (personalized or non-personalized, depending on your consent)</li>
+        <li>Measuring advertising effectiveness</li>
+        <li>Analytics to understand app usage patterns</li>
+        <li>Processing in-app purchases</li>
+    </ul>
 
-        <h2>
-            <svg class="icon user-icon" viewBox="0 0 24 24">
-                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
-            </svg>
-            Accessibility Permission
-        </h2>
-        <p>To enable certain convenience features (for example, enhanced volume control or automatic actions tied to hardware buttons), the app may request the Android Accessibility permission. Important details:</p>
-        <ul>
-            <li><strong>Why:</strong> Accessibility access allows the app to interact with system events required to implement features that improve usability (for example, displaying persistent volume controls or responding to system key events).</li>
-            <li><strong>What we DO NOT do:</strong> We do not read or transmit your typed text, screen contents, or audio. The permission is used only to detect system-level events and to control audio settings, as explained inside the app.</li>
-            <li><strong>User Control:</strong> Granting Accessibility access is optional. If you decline, the app will continue to work with reduced functionality where applicable.</li>
-        </ul>
+    <h2>&#129309; 5. Third-Party Services and Advertising Partners</h2>
+    <p>Our App integrates the following third-party services and SDKs. These services may collect data from your device as described below. Each partner may act as an independent data controller for the data they collect.</p>
 
-        <h2>
-            <svg class="icon user-icon" viewBox="0 0 24 24">
-                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
-            </svg>
-            Children's Privacy
-        </h2>
-        <p>Our app is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we discover that we have collected information from a child under 13, we will take steps to delete it promptly.</p>
+    <h3>5.1 Google AdMob (Advertising)</h3>
+    <ul>
+        <li><strong>Purpose:</strong> Displaying banner, interstitial, and rewarded advertisements.</li>
+        <li><strong>Data Collected:</strong> Advertising ID, device information, IP address (for approximate location), ad interaction data (impressions, clicks), and cookies/similar technologies for ad personalization and measurement.</li>
+        <li><strong>Personalization:</strong> If you provide consent, ads may be personalized based on your interests. If you do not consent, you will still see ads, but they will not be personalized.</li>
+        <li><strong>TCF Compliance:</strong> We participate in the IAB Europe Transparency &amp; Consent Framework (TCF) and comply with its specifications and policies. Our advertising partners who are TCF-registered vendors may process your data in accordance with the purposes defined in the TCF framework.</li>
+        <li><strong>Partners:</strong> Google and its advertising partners may process your data. The full list of Google's advertising partners is available at <a href="https://support.google.com/admob/answer/9012903" target="_blank">Google Ad Technology Partners</a>.</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> | <a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob Policy</a></li>
+    </ul>
 
-        <h2>
-            <svg class="icon doc-icon" viewBox="0 0 24 24">
-                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-            </svg>
-            Permissions
-        </h2>
-        <p>The app may request the following permissions. Each permission is used only for the purposes listed:</p>
-        <ul>
-            <li><strong>Modify System Audio / Audio Settings:</strong> Required to change system and stream volumes.</li>
-            <li><strong>Foreground Service:</strong> To keep volume controls available while the app is running in the background.</li>
-            <li><strong>Vibration:</strong> To provide haptic feedback on certain actions.</li>
-            <li><strong>Notifications:</strong> To display persistent or quick-access volume controls.</li>
-            <li><strong>Internet Access:</strong> Used only to download and display advertisements; no personal data of users is uploaded by us.</li>
-            <li><strong>Accessibility:</strong> Optional; explained above in the Accessibility Permission section.</li>
-        </ul>
+    <h3>5.2 Google User Messaging Platform (UMP)</h3>
+    <ul>
+        <li><strong>Purpose:</strong> Managing user consent for personalized advertising and data processing, in compliance with GDPR and other regulations.</li>
+        <li><strong>Data Collected:</strong> Consent preferences and status.</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+    </ul>
 
-        <h2>
-            <svg class="icon user-icon" viewBox="0 0 24 24">
-                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
-            </svg>
-            Your Rights
-        </h2>
-        <p>You have the right to:</p>
-        <ul>
-            <li>Stop using the app at any time.</li>
-            <li>Clear app data from your device settings (this will reset preferences and local data).</li>
-            <li>Opt out of personalized ads via your device advertising settings.</li>
-            <li>Request information about data we process (limited to non-identifying analytics) by contacting us at the email below.</li>
-        </ul>
+    <h3>5.3 Google Play Billing</h3>
+    <ul>
+        <li><strong>Purpose:</strong> Processing in-app purchases (Premium subscription).</li>
+        <li><strong>Data Collected:</strong> Transaction status is provided to us by Google. We do not receive or store payment card details.</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+    </ul>
 
-        <h2>
-            <svg class="icon doc-icon" viewBox="0 0 24 24">
-                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-            </svg>
-            Changes to This Policy
-        </h2>
-        <p>We may update this Privacy Policy from time to time. If we make material changes, we will post the updated policy here with a new "Last Updated" date. Continued use of the app after updates indicates acceptance of the changes.</p>
+    <h3>5.4 Google Play Services &amp; Crash/Analytics SDKs</h3>
+    <ul>
+        <li><strong>Purpose:</strong> App distribution, crash reporting, and basic analytics (anonymous).</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+    </ul>
 
-        <div class="contact-info">
-            <h2>
-                <svg class="icon contact-icon" viewBox="0 0 24 24">
-                    <path d="M20,4H4C2.89,4 2,4.89 2,6V18C2,19.1 2.9,20 4,20H20C21.1,20 22,19.1 22,18V6C22,4.89 21.1,4 20,4M20,8L12,13L4,8V6L12,11L20,6V8Z"/>
-                </svg>
-                Contact Us
-            </h2>
-            <p>If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:</p>
+    <h2>&#127850; 6. Cookies and Tracking Technologies</h2>
+    <p>Our advertising partners (including Google AdMob) may use cookies, mobile advertising identifiers (such as the Android Advertising ID), and similar technologies to:</p>
+    <ul>
+        <li>Store and/or access information on your device</li>
+        <li>Serve personalized or non-personalized advertisements</li>
+        <li>Measure the effectiveness of advertisements</li>
+        <li>Develop and improve services</li>
+    </ul>
+    <p>You can manage your preferences through the consent dialog shown when you first use the App, or at any time by resetting your advertising preferences in your device settings (Settings &gt; Google &gt; Ads).</p>
+
+    <h2>&#127758; 7. International Data Transfers</h2>
+    <p>Our advertising partners, including Google, may transfer your data to servers located outside the European Economic Area (EEA), including to the United States. These transfers are conducted in compliance with applicable data protection laws, using appropriate safeguards such as:</p>
+    <ul>
+        <li>Standard Contractual Clauses (SCCs) approved by the European Commission</li>
+        <li>Adequacy decisions by the European Commission</li>
+        <li>EU-US Data Privacy Framework (where applicable)</li>
+    </ul>
+    <p>For more information on Google's data transfer mechanisms, please visit <a href="https://policies.google.com/privacy/frameworks" target="_blank">Google Privacy Frameworks</a>.</p>
+
+    <h2>&#128274; 8. Data Storage, Security, and Retention</h2>
+    <ul>
+        <li>App preferences and settings are stored locally on your device.</li>
+        <li>We do not maintain backend servers for user personal data; any analytics/crash data sent to third parties is anonymous and retained by those providers under their policies.</li>
+        <li>We implement reasonable technical and organizational measures to protect data from unauthorized access, alteration, disclosure, or destruction.</li>
+        <li><strong>Retention:</strong> Anonymous analytics and crash reports are retained only as long as necessary to improve the App. Advertising data is retained by Google in accordance with their retention policies. Local app data is retained until you uninstall the App or clear app data.</li>
+    </ul>
+
+    <h2>&#9855; 9. Accessibility Permission</h2>
+    <p>To enable certain convenience features (for example, enhanced volume control or automatic actions tied to hardware buttons), the app may request the Android Accessibility permission. Important details:</p>
+    <ul>
+        <li><strong>Why:</strong> Accessibility access allows the app to interact with system events required to implement features that improve usability (responding to system key events, displaying persistent volume controls).</li>
+        <li><strong>What we DO NOT do:</strong> We do not read or transmit your typed text, screen contents, or audio. The permission is used only to detect system-level events and to control audio settings.</li>
+        <li><strong>User Control:</strong> Granting Accessibility access is optional. If you decline, the app will continue to work with reduced functionality.</li>
+    </ul>
+
+    <h2>&#128118; 10. Children's Privacy</h2>
+    <p>Our app is not directed to children under 13 years of age (or under 16 in certain EEA jurisdictions). We do not knowingly collect personal information from children. If we discover that we have inadvertently collected information from a child, we will take steps to delete it promptly. If you believe a child has provided personal data to us, please contact us at the email below.</p>
+
+    <h2>&#128273; 11. Permissions</h2>
+    <p>The App may request the following permissions. Each permission is used only for the purposes listed:</p>
+    <ul>
+        <li><strong>Modify System Audio / Audio Settings:</strong> Required to change system and stream volumes (core functionality).</li>
+        <li><strong>Foreground Service:</strong> To keep volume controls available while the app is running in the background.</li>
+        <li><strong>Vibration:</strong> To provide haptic feedback on certain actions.</li>
+        <li><strong>Notifications:</strong> To display persistent or quick-access volume controls.</li>
+        <li><strong>Internet Access:</strong> Used to download and display advertisements, process in-app purchases, and send crash reports.</li>
+        <li><strong>Accessibility:</strong> Optional; explained above in the Accessibility Permission section.</li>
+        <li><strong>AD_ID:</strong> To access the Android Advertising ID for serving relevant advertisements.</li>
+    </ul>
+
+    <h2>&#128100; 12. Your Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+
+    <h3>12.1 Rights for All Users:</h3>
+    <ul>
+        <li>Stop using the App at any time.</li>
+        <li>Clear app data from your device settings (this will reset preferences and local data).</li>
+        <li>Opt out of personalized ads via your device advertising settings (Settings &gt; Google &gt; Ads &gt; Reset Advertising ID or Delete Advertising ID).</li>
+    </ul>
+
+    <h3>12.2 Additional Rights for EEA/UK Users (GDPR):</h3>
+    <ul>
+        <li><strong>Right of Access (Art. 15):</strong> You have the right to request a copy of the personal data we hold about you.</li>
+        <li><strong>Right to Rectification (Art. 16):</strong> You may request correction of inaccurate data.</li>
+        <li><strong>Right to Erasure (Art. 17):</strong> You may request deletion of your personal data ("right to be forgotten").</li>
+        <li><strong>Right to Restrict Processing (Art. 18):</strong> You may request that we restrict the processing of your data.</li>
+        <li><strong>Right to Data Portability (Art. 20):</strong> You may request your data in a structured, commonly used format.</li>
+        <li><strong>Right to Object (Art. 21):</strong> You may object to processing based on legitimate interest, including profiling for advertising purposes.</li>
+        <li><strong>Right to Withdraw Consent (Art. 7):</strong> Where processing is based on consent, you may withdraw your consent at any time without affecting the lawfulness of processing performed before the withdrawal. You can withdraw consent by:
             <ul>
-                <li><strong>Email:</strong> <a href="mailto:nova.orion.dev@gmail.com">nova.orion.dev@gmail.com</a></li>
+                <li>Resetting your advertising preferences in your device settings</li>
+                <li>Clearing the App's data in your device settings (this resets consent and the consent dialog will be shown again)</li>
+                <li>Contacting us at the email below</li>
             </ul>
-            <p style="margin-top:12px;font-size:0.95em;color:#555">Data Controller: Nova Orion (contact via the email above). We will respond to verified requests within a reasonable timeframe.</p>
-        </div>
+        </li>
+        <li><strong>Right to Lodge a Complaint:</strong> You have the right to lodge a complaint with a supervisory authority in your EU/EEA member state if you believe your data has been processed unlawfully.</li>
+    </ul>
 
-        <h2>
-            <svg class="icon compliance-icon" viewBox="0 0 24 24">
-                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"/>
-            </svg>
-            Compliance
-        </h2>
-        <p>This policy complies with:</p>
+    <h3>12.3 Additional Rights for California Users (CCPA):</h3>
+    <ul>
+        <li><strong>Right to Know:</strong> You may request information about the categories and specific pieces of personal information we have collected.</li>
+        <li><strong>Right to Delete:</strong> You may request deletion of personal information we have collected.</li>
+        <li><strong>Right to Opt-Out:</strong> You may opt out of the "sale" of personal information (note: we do not sell personal data as defined by CCPA, but ad-supported data sharing may qualify; you can opt out via your device ad settings).</li>
+        <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights.</li>
+    </ul>
+
+    <p>To exercise any of these rights, please contact us at <a href="mailto:nova.orion.dev@gmail.com">nova.orion.dev@gmail.com</a>. We will respond to verified requests within 30 days (or as required by applicable law).</p>
+
+    <h2>&#128221; 13. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. If we make material changes, we will post the updated policy here with a new "Last Updated" date. Continued use of the App after updates indicates acceptance of the changes. We encourage you to review this policy periodically.</p>
+
+    <div class="contact-info">
+        <h2>&#128231; 14. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy, wish to exercise your data rights, or have concerns about our data practices, please contact us:</p>
         <ul>
-            <li>Google Play Policy requirements</li>
-            <li>GDPR (General Data Protection Regulation)</li>
-            <li>CCPA (California Consumer Privacy Act)</li>
-            <li>COPPA (Children's Online Privacy Protection Act)</li>
+            <li><strong>Email:</strong> <a href="mailto:nova.orion.dev@gmail.com">nova.orion.dev@gmail.com</a></li>
         </ul>
+        <p style="margin-top:8px;font-size:0.95em;color:#555"><strong>Data Controller:</strong> Nova Orion (contact via the email above). We will respond to verified requests within 30 days.</p>
+    </div>
 
-        <div class="footer">
-            <strong>Nova Orion Volume Control</strong><br>
-            <em>Developed with ❤️ by Nova Orion Team</em>
-        </div>
+    <h2>&#9989; 15. Compliance</h2>
+    <p>This policy is designed to comply with:</p>
+    <ul>
+        <li><strong>GDPR</strong> &mdash; General Data Protection Regulation (EU/EEA)</li>
+        <li><strong>UK GDPR</strong> &mdash; United Kingdom General Data Protection Regulation</li>
+        <li><strong>ePrivacy Directive</strong> &mdash; EU Cookie Law</li>
+        <li><strong>CCPA/CPRA</strong> &mdash; California Consumer Privacy Act / California Privacy Rights Act (USA)</li>
+        <li><strong>COPPA</strong> &mdash; Children's Online Privacy Protection Act (USA)</li>
+        <li><strong>Google Play Developer Policies</strong></li>
+        <li><strong>Google AdMob Policies</strong></li>
+        <li><strong>IAB TCF v2.2</strong> &mdash; Interactive Advertising Bureau Transparency &amp; Consent Framework</li>
+    </ul>
+
+    <div class="footer">
+        <strong>Nova Orion Volume Control</strong><br>
+        <em>Developed with &#10084;&#65039; by Nova Orion Team</em><br>
+        <small style="color:#999">Last updated: April 5, 2026</small>
     </div>
 </body>
 </html>
